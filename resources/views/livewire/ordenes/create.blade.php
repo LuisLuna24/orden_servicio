@@ -515,11 +515,17 @@
 
                 {{-- ========================================================================================================Procedencias de la muestra --}}
                 <div>
-                    <div class="mt-10 mb-5">{{-- -------------------------------------------------------------------------Procedencia --}}
+                    <div class="mt-5 mb-5">{{-- -------------------------------------------------------------------------Procedencia --}}
                         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                             {{ __('Procedencia') }}
                         </h2>
                         <div class="w-full h-1 bg-gray-800 dark:bg-gray-200"></div>
+                    </div>
+                    <div class="grid grid-cols-1 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Nombre de Procedencia:</label>
+                            <x-input type="text" />
+                        </div>
                     </div>
                     <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
                         <div class="flex flex-col text-black dark:text-white">
@@ -694,7 +700,7 @@
                 </div>
                 <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
                     <div class="flex flex-col text-black dark:text-white">
-                        <label for="">Cantidad enviada:</label>
+                        <label for="">Cantidad de muestra:</label>
                         <x-input type="text" />
                     </div>
                     <div class="flex flex-col text-black dark:text-white">
