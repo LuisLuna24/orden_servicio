@@ -8,6 +8,16 @@
         </div>
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
+                <label for="">No. Orden:</label>
+                <x-input type="text" />
+            </div>
+            <div class="flex flex-col text-black dark:text-white">
+                <label for="">NETSUITE:</label>
+                <x-input type="text" />
+            </div>
+        </div>
+        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+            <div class="flex flex-col text-black dark:text-white">
                 <label for="">Documento:</label>
                 <x-input type="file" />
             </div>
@@ -16,12 +26,7 @@
                 <x-input type="text" />
             </div>
         </div>
-        <div class="grid grid-cols-1 max-md:grid-cols-1 gap-5 mb-1">
-            <div class="flex flex-col text-black dark:text-white">
-                <label for="">NETSUITE:</label>
-                <x-input type="text" />
-            </div>
-        </div>
+        
         <hr class="mt-5 mb-5">
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
