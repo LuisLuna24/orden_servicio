@@ -1,16 +1,16 @@
 <div>
     <div>
-        <div class="mb-5">{{-- -------------------------------------------------------------------------Datos del Cliene --}}
+        <div class="mt-5 flex justify-between">{{-- -------------------------------------------------------------------------Datos del Cliene --}}
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Datos del Cliente') }}
+                {{ __('Datos de Orden') }}
             </h2>
-            <div class="w-full h-1 bg-gray-800 dark:bg-gray-200"></div>
-        </div>
-        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-            <div class="flex flex-col text-black dark:text-white">
-                <label for="">No. Orden:</label>
-                <x-input type="text" />
+            <div class="flex text-black dark:text-white gap-3 items-center">
+                <label for="">¿Requiere factura?</label>
+                <x-input type="checkbox" />
             </div>
+        </div>
+        <hr class="mb-5">
+        <div class="grid grid-cols-1 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">NETSUITE:</label>
                 <x-input type="text" />
@@ -18,20 +18,32 @@
         </div>
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
-                <label for="">Documento:</label>
-                <x-input type="file" />
+                <label for="">Tipo de Docuemnto:</label>
+                <x-input type="text" />
+                {{--<div class="grid w-full items-center gap-1.5 ">
+                    <input id="picture" type="file"
+                        class="flex h-10 w-full rounded-md border border-input bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-400 dark:text-gray-300 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600">
+                </div>--}}
             </div>
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Folio de documento:</label>
                 <x-input type="text" />
             </div>
         </div>
-        
-        <hr class="mt-5 mb-5">
+        <div class="mt-5">{{-- -------------------------------------------------------------------------Datos del Cliene --}}
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Datos del Cliente') }}
+            </h2>
+        </div>
+        <hr class="mb-5">
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Razón Social:</label>
-                <x-input type="text" />
+                <x-select>
+                    <option value="0">Nombre 1</option>
+                    <option value="1">Nombre 2</option>
+                    <option value="2">Nombre 3</option>
+                </x-select>
             </div>
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Régimen Fiscal;</label>
@@ -612,10 +624,10 @@
                         <div class="flex flex-col text-black dark:text-white">
                             <label for="">Tipo de Análisis :</label>
                             <x-select>
-                                <option value="0">Tipo de Análisis  1</option>
-                                <option value="1">Tipo de Análisis  2</option>
-                                <option value="2">Tipo de Análisis  3</option>
-                                <option value="3">Tipo de Análisis  4</option>
+                                <option value="0">Tipo de Análisis 1</option>
+                                <option value="1">Tipo de Análisis 2</option>
+                                <option value="2">Tipo de Análisis 3</option>
+                                <option value="3">Tipo de Análisis 4</option>
                             </x-select>
                         </div>
                     </div>
@@ -628,10 +640,10 @@
 
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Tipo de Análisis 
+                                        Tipo de Análisis
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Análisis  especifico
+                                        Análisis especifico
                                     </th>
                                 </tr>
                             </thead>
@@ -743,6 +755,92 @@
                         <x-input class="w-full" type="date" />
                     </div>
                 </div>
+
+                {{-- ========================================================================================================Procedencias de la muestra --}}
+                <div>
+                    <div class="mt-5 mb-5">{{-- -------------------------------------------------------------------------Procedencia --}}
+                        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                            {{ __('Procedencia') }}
+                        </h2>
+                        <div class="w-full h-1 bg-gray-800 dark:bg-gray-200"></div>
+                    </div>
+                    <div class="grid grid-cols-1 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Nombre de Procedencia:</label>
+                            <x-input type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Sitio de muestreo:</label>
+                            <x-input type="text" />
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Nombre del sitio</label>
+                            <x-input type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Estado:</label>
+                            <x-select>
+                                <option value="0">Mexico</option>
+                                <option value="1">Jalisco</option>
+                                <option value="2">Puebla</option>
+                            </x-select>
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Municipio:</label>
+                            <x-select>
+                                <option value="0">Estado 1</option>
+                                <option value="1">Estado 2</option>
+                                <option value="2">Estado 3</option>
+                            </x-select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Colonia:</label>
+                            <x-select>
+                                <option value="0">Colonia 1</option>
+                                <option value="1">Colonia 2</option>
+                                <option value="2">Colonia 3</option>
+                            </x-select>
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Calle:</label>
+                            <x-input type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Código Postal:</label>
+                            <x-input type="text" />
+                        </div>
+                        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+                            <div class="flex flex-col text-black dark:text-white">
+                                <label for="">No.Exterior:</label>
+                                <x-input type="text" />
+                            </div>
+                            <div class="flex flex-col text-black dark:text-white">
+                                <label for="">No. Interior:</label>
+                                <x-input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Cordenadas GPS:</label>
+                            <x-input type="text" />
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Registro SADER:</label>
+                            <x-input type="text" />
+                        </div>
+                    </div>
+                </div>
+
+
                 <div>
                     <div class="mt-5 mb-5">{{-- -------------------------------------------------------------------------Análisis  --}}
                         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -754,10 +852,10 @@
                         <div class="flex flex-col text-black dark:text-white">
                             <label for="">Tipo de Análisis :</label>
                             <x-select>
-                                <option value="0">Tipo de Análisis  1</option>
-                                <option value="1">Tipo de Análisis  2</option>
-                                <option value="2">Tipo de Análisis  3</option>
-                                <option value="3">Tipo de Análisis  4</option>
+                                <option value="0">Tipo de Análisis 1</option>
+                                <option value="1">Tipo de Análisis 2</option>
+                                <option value="2">Tipo de Análisis 3</option>
+                                <option value="3">Tipo de Análisis 4</option>
                             </x-select>
                         </div>
                     </div>
@@ -770,10 +868,10 @@
 
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Tipo de Análisis 
+                                        Tipo de Análisis
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Análisis  especifico
+                                        Análisis especifico
                                     </th>
                                 </tr>
                             </thead>
