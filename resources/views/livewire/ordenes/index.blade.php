@@ -1,46 +1,52 @@
 <div class="grid gap-5">
-
-
-    <div class="flex gap-3 dark:text-white">
-        <div class="flex flex-col gap-1">
-            <label for="data">Datos:</label>
-            <x-select wire:model.live="data">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-            </x-select>
+    <div class="flex gap-3 max-xl:flex-col dark:text-white ">
+        <div class="flex gap-1 max-xl:justify-around max-md:flex-col">
+            <div class="flex flex-col gap-1">
+                <label for="data">Datos:</label>
+                <x-select wire:model.live="data">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </x-select>
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="status">Estado:</label>
+                <x-select wire:model.live="status">
+                    <option value="0">Todos</option>
+                    <option value="1">Envío</option>
+                    <option value="2">Captura</option>
+                    <option value="3">Recepción</option>
+                    <option value="4">Liberada</option>
+                    <option value="5">Cancelada</option>
+                </x-select>
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="date">Del:</label>
+                <x-input type="date" wire:model.live="date" class="max-md:w-full" />
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="date">Al:</label>
+                <x-input type="date" wire:model.live="date" class="max-md:w-full" />
+            </div>
         </div>
-        <div class="flex flex-col gap-1">
-            <label for="status">Estado:</label>
-            <x-select wire:model.live="status">
-                <option value="0">Todos</option>
-                <option value="1">Envio</option>
-                <option value="2">Captura</option>
-                <option value="3">Resepcion</option>
-                <option value="4">Liverada</option>
-                <option value="5">Cancelada</option>
-            </x-select>
-        </div>
-        <div class="flex flex-col gap-1">
-            <label for="date">Fecha:</label>
-            <x-input type="date" wire:model.live="date" />
-        </div>
-        <div class="flex flex-col gap-1 w-full">
-            <label for="search">Buscar:</label>
-            <x-input type="text" wire:model.live="search" placeholder="(No. orden, cliente o interesado)" />
-        </div>
-        <div class="grid place-items-end">
-            <x-button-routing href="{{ route('ordenes.create') }}" wire:navigate.hover>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-plus">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-                    <path d="M12 11l0 6" />
-                    <path d="M9 14l6 0" />
-                </svg> Nueva
-            </x-button-routing>
+        <div class="flex w-full gap-3 max-md:flex-col">
+            <div class="flex flex-col gap-1 w-full">
+                <label for="search">Buscar:</label>
+                <x-input type="text" wire:model.live="search" placeholder="(No. orden, cliente o interesado)" />
+            </div>
+            <div class="grid place-items-end max-md:place-items-center">
+                <x-button-routing href="{{ route('ordenes.create') }}" wire:navigate.hover>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-file-plus">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                        <path d="M12 11l0 6" />
+                        <path d="M9 14l6 0" />
+                    </svg> Nueva
+                </x-button-routing>
+            </div>
         </div>
     </div>
 
@@ -62,7 +68,7 @@
                         Cliente/Interesado
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Informacion
+                        Información
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Estado
@@ -74,7 +80,7 @@
                         Ver
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Eliminar
+                        Cancelar
                     </th>
                 </tr>
             </thead>
@@ -94,7 +100,7 @@
                         Roberto Gomez Bolaños
                     </td>
                     <td class="px-6 py-4">
-                        Sin informacion adicional
+                        Sin información adicional
                     </td>
                     <td class="px-6 py-4">
                         Captura
@@ -144,10 +150,10 @@
                         Victoriano Huerta
                     </td>
                     <td class="px-6 py-4">
-                        Sin informacion adicional
+                        Sin información adicional
                     </td>
                     <td class="px-6 py-4">
-                        Envio
+                        Envío
                     </td>
                     <td class="px-6 py-4">
                         Si
@@ -195,7 +201,7 @@
                         Álvaro Obregón
                     </td>
                     <td class="px-6 py-4">
-                        Algun tipo de informacion
+                        Algún tipo de información
                     </td>
                     <td class="px-6 py-4">
                         Cancelado
