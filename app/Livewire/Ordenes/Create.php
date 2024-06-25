@@ -26,6 +26,18 @@ class Create extends Component
         $this->view_muestra=true;
     }
 
+//================================================================Eliminar muestra
+
+    public $delete=false;
+    public function delete_muestra(){
+        $this->delete=true;
+    }
+
+    public function drop_muestra(){
+        $this->delete=false;
+    }
+    
+
 
 //================================================================Render 
     public function render()

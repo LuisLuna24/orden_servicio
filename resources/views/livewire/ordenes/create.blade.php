@@ -20,10 +20,10 @@
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Tipo de Docuemnto:</label>
                 <x-input type="text" />
-                {{--<div class="grid w-full items-center gap-1.5 ">
+                {{-- <div class="grid w-full items-center gap-1.5 ">
                     <input id="picture" type="file"
                         class="flex h-10 w-full rounded-md border border-input bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-400 dark:text-gray-300 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600">
-                </div>--}}
+                </div> --}}
             </div>
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Folio de documento:</label>
@@ -46,7 +46,7 @@
                 </x-select>
             </div>
             <div class="flex flex-col text-black dark:text-white">
-                <label for="">Régimen Fiscal;</label>
+                <label for="">Régimen Fiscal:</label>
                 <x-input type="text" />
             </div>
         </div>
@@ -147,7 +147,11 @@
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Nombre Interesado:</label>
-                <x-input type="text" />
+                <x-select>
+                    <option value="">Interesado 1</option>
+                    <option value="">Interesado 2</option>
+                    <option value="">Interesado 3</option>
+                </x-select>
             </div>
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Apellido Interesado:</label>
@@ -326,6 +330,9 @@
                         <th scope="col" class="px-6 py-3">
                             Editar
                         </th>
+                        <th scope="col" class="px-6 py-3">
+                            Eliminar
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -379,6 +386,20 @@
                                     <path d="M16 5l3 3" />
                                 </svg></x-button>
                         </td>
+                        <td class="px-6 py-4">
+                            <x-danger-button wire:click="delete_muestra"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-x">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                    <path d="M10 12l4 4m0 -4l-4 4" />
+                                </svg>
+                            </x-danger-button>
+                        </td>
+                        
                     </tr>
                     <tr
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 ease-in duration-300">
@@ -430,6 +451,19 @@
                                     <path d="M16 5l3 3" />
                                 </svg>
                             </x-button>
+                        </td>
+                        <td class="px-6 py-4">
+                            <x-danger-button wire:click="delete_muestra"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-x">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                    <path d="M10 12l4 4m0 -4l-4 4" />
+                                </svg>
+                            </x-danger-button>
                         </td>
                     </tr>
                 </tbody>
@@ -486,7 +520,7 @@
                 </div>
                 <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
                     <div class="flex flex-col text-black dark:text-white">
-                        <label for="">Cantidad enviada:</label>
+                        <label for="">Cantidad de muestra:</label>
                         <x-input type="text" />
                     </div>
                     <div class="flex flex-col text-black dark:text-white">
@@ -506,12 +540,28 @@
                 </div>
                 <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
                     <div class="flex flex-col text-black dark:text-white">
+                        <label for="">Contenedor de resipientes:</label>
+                        <x-select>
+                            <option value="0">Contenedor 1</option>
+                            <option value="1">Contenedor 2</option>
+                            <option value="2">Contenedor 3</option>
+                            <option value="3">Contenedor 4</option>
+                        </x-select>
+                    </div>
+                    <div class="flex flex-col text-black dark:text-white">
+                        <label for="">Cantidad de contenedores:</label>
+                        <x-input type="text" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
+                    
+                    <div class="flex flex-col text-black dark:text-white">
                         <label for="">tipo de resipiente:</label>
                         <x-select>
-                            <option value="0">Tipo de resipiente 1</option>
-                            <option value="1">Tipo de resipiente 2</option>
-                            <option value="2">Tipo de resipiente 3</option>
-                            <option value="3">Tipo de resipiente 4</option>
+                            <option value="0">Resipiente 1</option>
+                            <option value="1">Resipiente 2</option>
+                            <option value="2">Resipiente 3</option>
+                            <option value="3">Resipiente 4</option>
                         </x-select>
                     </div>
                     <div class="flex flex-col text-black dark:text-white">
@@ -523,6 +573,21 @@
                     <div class="flex flex-col text-black dark:text-white">
                         <label for="">Fecha muestreo:</label>
                         <x-input class="w-full" type="date" />
+                    </div>
+                    <div class="flex flex-col text-black dark:text-white">
+                        <label for="">Fecha envío:</label>
+                        <x-input class="w-full" type="date" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
+                    <div class="flex flex-col text-black dark:text-white">
+                        <label for="">Idioma de informe:</label>
+                        <x-select class="w-full" type="date" >
+                            <option value="0">Idioma 1</option>
+                            <option value="1">Idioma 2</option>
+                            <option value="2">Idioma 3</option>
+                            <option value="3">Idioma 4</option>
+                        </x-select>
                     </div>
                     <div class="flex flex-col text-black dark:text-white">
                         <label for="">Fecha envío:</label>
@@ -911,6 +976,20 @@
                     <x-danger-button wire:click="cancel_muestra">Cancelar</x-danger-button>
                 </div>
             </form>
+        </x-slot>
+        <x-slot name='footer'></x-slot>
+    </x-dialog-modal>
+
+    {{-- ====================================================================================================================Eliminar muestra --}}
+    <x-dialog-modal wire:model="delete">
+        <x-slot name='title'>
+            <h2 class="text-center text-2xl">¿Desea eliminar esta muestra?</h2>
+        </x-slot>
+        <x-slot name='content'>
+            <div class="grid grid-cols-2 place-items-center m-5">
+                <x-button wire:click="drop_muestra">Eliminar</x-button>
+                <x-danger-button wire:click="drop_muestra">Regresar</x-danger-button>
+            </div>
         </x-slot>
         <x-slot name='footer'></x-slot>
     </x-dialog-modal>
