@@ -1,6 +1,6 @@
 <div>
-    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+    <div class="grid grid-cols-1 max-md:grid-cols-1 gap-5 mb-1">
+        <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Categoria:</label>
                 <x-select class="w-full">
@@ -14,7 +14,17 @@
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Sub.Categoria:</label>
                 <x-select class="w-full">
-                    <option value="">selecciona</option>
+                    <option value="">selecciona </option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                </x-select>
+            </div>
+            <div class="flex flex-col text-black dark:text-white">
+                <label for="">Unidad de medida:</label>
+                <x-select class="w-full">
+                    <option value="">selecciona </option>
                     <option value="">1</option>
                     <option value="">2</option>
                     <option value="">3</option>
@@ -23,11 +33,11 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+        <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
-                <label for="">Tipo de Muestra:</label>
+                <label for="">Tipo de muestra:</label>
                 <x-select class="w-full">
-                    <option value="">selecciona</option>
+                    <option value="">selecciona </option>
                     <option value="">1</option>
                     <option value="">2</option>
                     <option value="">3</option>
@@ -35,14 +45,9 @@
                 </x-select>
             </div>
             <div class="flex flex-col text-black dark:text-white">
-                <label for="">Cantidad a enviar:</label>
+                <label for="">Cantidad de muestra:</label>
                 <x-input class="w-full" />
             </div>
-        </div>
-    </div>
-    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-
-        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Recipiente:</label>
                 <x-select class="w-full">
@@ -53,23 +58,25 @@
                     <option value="">4</option>
                 </x-select>
             </div>
-            <div class="flex flex-col text-black dark:text-white">
-                <label for="">No.Lote:</label>
-                <x-input class="w-full" />
-            </div>
         </div>
 
-        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
+        <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
+            <div class="flex flex-col text-black dark:text-white">
+                <label for="">No.lote:</label>
+                <x-input class="w-full" />
+            </div>
             <div class="flex flex-col text-black dark:text-white">
                 <label for="">Fecha de muestreo:</label>
                 <x-input type="date" class="w-full" />
             </div>
             <div class="flex flex-col text-black dark:text-white">
-                <label for="">Productor o responsable: </label>
+                <label for="">Productor o responsable:</label>
                 <x-input class="w-full" />
             </div>
         </div>
+
     </div>
+
     <div class="flex flex-col text-black dark:text-white">
         <label for="">Otros Datos: (Para que necesita )</label>
         <x-textarea></x-textarea>

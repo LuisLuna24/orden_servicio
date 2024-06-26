@@ -13,68 +13,56 @@
             <x-nav-orden/>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-10">
                 <div>
-                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-                        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Sitio de Muestreo:</label>
-                                <x-input class="w-full" />
-                            </div>
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Nombre del sitio de muestreo:</label>
-                                <x-input class="w-full" />
-                            </div>
+                    <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Nombre de Procedencia:</label>
+                            <x-input class="w-full" />
                         </div>
-
-                        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Estado:</label>
-                                <x-select class="w-full">
-                                    <option value="">selecciona </option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </x-select>
-                            </div>
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Colonia:</label>
-                                <x-select class="w-full">
-                                    <option value="">selecciona</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </x-select>
-                            </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Sitio de Muestreo:</label>
+                            <x-input class="w-full" />
                         </div>
-                        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Municipio:</label>
-                                <x-select class="w-full">
-                                    <option value="">selecciona </option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </x-select>
-                            </div>
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Calle:</label>
-                                <x-input class="w-full" />
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">No.Exterior:</label>
-                                <x-input class="w-full" />
-                            </div>
-                            <div class="flex flex-col text-black dark:text-white">
-                                <label for="">No.Interior:</label>
-                                <x-input class="w-full" />
-                            </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Nombre del Sitio de Muestreo::</label>
+                            <x-input class="w-full" />
                         </div>
                     </div>
+
+                    <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Estado:</label>
+                            <x-input class="w-full" />
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Municipio:</label>
+                            <x-input class="w-full" />
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Colonia:</label>
+                            <x-input class="w-full" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">Calle:</label>
+                            <x-input class="w-full" />
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">No.Exterior:</label>
+                            <x-input class="w-full" />
+                        </div>
+                        <div class="flex flex-col text-black dark:text-white">
+                            <label for="">No.Interior:</label>
+                            <x-input class="w-full" />
+                        </div>
+                    </div>
+
+
+
+
+
+
                     <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5 mb-1">
                         <div class="flex flex-col text-black dark:text-white">
                             <label for="">CP:</label>

@@ -112,8 +112,14 @@
                         </div>
                         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-1">
                             <div class="flex flex-col text-black dark:text-white">
-                                <label for="">Nombre Interesado:</label>
-                                <x-input type="text" />
+                                <label for="">Nombre del Interesado:</label>
+                                <x-select class="w-full">
+                                    <option value="">selecciona </option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </x-select>
                             </div>
                             <div class="flex flex-col text-black dark:text-white">
                                 <label for="">Apellido Interesado:</label>
